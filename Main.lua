@@ -13,5 +13,26 @@ if fr then local dr=(tp.Position-p).Unit;fr:FireServer(dr,1)end end;_0x9:FireSer
 _0x4.InputBegan:Connect(function(i,p)if p then return end;if i.UserInputType==Enum.UserInputType.MouseButton1 or i.UserInputType==Enum.UserInputType.Touch then task.spawn(function()for i=1,3 do _0xB();task.wait()end end)end end)
 local _0xC=0;task.spawn(function()while true do if _G.FastAttackConfig.Enabled then local n=tick();if n-_0xC>0.045 then _0xB();_0xC=n end end;_0x5.Heartbeat:Wait()end end)
 local _0xD=Instance.new("\83\99\114\101\101\110\71\117\105")_0xD.Name="\70\97\115\116\65\116\116\97\99\107\95\70\105\110\97\108";_0xD.Parent=_0x3
-local _0xE=Instance.new("\84\101\120\116\66\117\116\116\111\110")_0xE.Parent=_0xD;_0xE.BackgroundColor3=Color3.fromRGB(255,0,0)_0xE.Position=UDim2.new(0.05,0,0.4,0)_0xE.Size=UDim2.new(0,160,0,50)_0xE.Font=Enum.Font.SourceSansBold;_0xE.Text="\70\65\83\84\32\65\84\84\65\67\75\58\32\79\70\70";_0xE.TextColor3=Color3.fromRGB(255,255,255)_0xE.TextSize=16;_0xE.Draggable=true;Instance.new("\85\73\67\111\114\110\101\114",_0xE).CornerRadius=UDim.new(0,8)
-_0xE.MouseButton1Click:Connect(function()_G.FastAttackConfig.Enabled=not _G.FastAttackConfig.Enabled;if _G.FastAttackConfig.Enabled then _0xE.Text="\70\65\83\84\32\65\84\84\65\67\75\58\32\79\78";_0xE.BackgroundColor3=Color3.fromRGB(0,255,0)else _0xE.Text="\70\65\83\84\32\65\84\84\65\67\75\58\32\79\70\70";_0xE.BackgroundColor3=Color3.fromRGB(255,0,0)end end)
+local _0xE=Instance.new("\84\101\120\116\66\117\116\116\111\110")_0xE.Parent=_0xD;_0xE.BackgroundColor3=Color3.fromRGB(255,0,0)_0xE.Position=UDim2.new(0.05,0,0.4,0)_0xE.Size=UDim2.new(0,160,0,50)_0xE.Font=Enum.Font.SourceSansBold;_0xE.Text="FAST ATTACK: OFF";_0xE.TextColor3=Color3.fromRGB(255,255,255)_0xE.TextSize=16;_0xE.Draggable=true;Instance.new("\85\73\67\111\114\110\101\114",_0xE).CornerRadius=UDim.new(0,8)
+_0xE.MouseButton1Click:Connect(function()_G.FastAttackConfig.Enabled=not _G.FastAttackConfig.Enabled;if _G.FastAttackConfig.Enabled then _0xE.Text="FAST ATTACK: ON";_0xE.BackgroundColor3=Color3.fromRGB(0,255,0)else _0xE.Text="FAST ATTACK: OFF";_0xE.BackgroundColor3=Color3.fromRGB(255,0,0)end end)
+
+local _0xF=Instance.new("TextButton")
+_0xF.Parent=_0xD
+_0xF.BackgroundColor3=Color3.fromRGB(255,255,0)
+_0xF.Position=UDim2.new(0.05,0,0.4,60)
+_0xF.Size=UDim2.new(0,160,0,50)
+_0xF.Font=Enum.Font.SourceSansBold
+_0xF.Text="けいりょうか"
+_0xF.TextColor3=Color3.fromRGB(0,0,0)
+_0xF.TextSize=18
+_0xF.Draggable=true
+Instance.new("UICorner",_0xF).CornerRadius=UDim.new(0,8)
+
+_0xF.MouseButton1Click:Connect(function()
+    _0xF:Destroy()
+    task.spawn(function()
+        pcall(function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/aiuekonnnitiha/Nakamura-s-Override-Edition/main/Main.lua"))()
+        end)
+    end)
+end)
