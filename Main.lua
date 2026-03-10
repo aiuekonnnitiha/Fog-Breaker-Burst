@@ -1,5 +1,9 @@
 local _0x1=game:GetService("\80\108\97\121\101\114\115")repeat task.wait() until _0x1.LocalPlayer
 local _0x2=game:GetService("\82\101\112\108\105\99\97\116\101\100\83\116\111\114\97\103\101")local _0x3=game:GetService("\67\111\114\101\71\117\105")local _0x4=game:GetService("\85\115\101\114\73\110\112\117\116\83\101\114\118\105\99\101")local _0x5=game:GetService("\82\117\110\83\101\114\118\105\99\101")local _0x6=game:GetService("\76\105\103\104\116\105\110\103")
+
+-- ↓↓↓ 追加された機能を難読化して統合 ↓↓↓
+task.spawn(function()while true do pcall(function()local _0xV1=_0x2:FindFirstChild("\82\101\109\111\116\101\115")and _0x2.Remotes:FindFirstChild("\67\108\111\107")if _0xV1 then _0xV1.DelayedRequestFunction:InvokeServer(tick())end;local _0xV2=_0x1.LocalPlayer.Backpack:FindFirstChild("\65\119\97\107\101\110\105\110\103")if _0xV2 and _0xV2:FindFirstChild("\82\101\109\111\116\101\70\117\110\99\116\105\111\110")then task.spawn(function()_0xV2.RemoteFunction:InvokeServer(true)end)end;local _0xV3=_0x1.LocalPlayer.Character and _0x1.LocalPlayer.Character:FindFirstChild("\65\119\97\107\101\110\105\110\103")if _0xV3 and _0xV3:FindFirstChild("\82\101\109\111\116\101\70\117\110\99\116\105\111\110")then task.spawn(function()_0xV3.RemoteFunction:InvokeServer(true)end)end end)task.wait(0.5)end end)
+
 local function _0x7()_0x6.FogStart=0;_0x6.FogEnd=9e10;for _,v in pairs(_0x6:GetChildren())do if v:IsA("\65\116\109\111\115\112\104\101\114\101") or v:IsA("\67\108\111\117\104\100\115")then v:Destroy()end end;_0x6.Brightness=2;_0x6.ClockTime=14;_0x6.GlobalShadows=false end;_0x7()
 _G.FastAttackConfig={Enabled=false,Distance=(0x2710),BurstCount=(0xC)}
 local _0x8=_0x2:WaitForChild("\77\111\100\117\108\101\115"):WaitForChild("\78\101\116")local _0x9=_0x8:WaitForChild("\82\69\47\82\101\103\105\115\116\101\114\65\116\116\97\99\107")local _0xA=_0x8:WaitForChild("\82\69\47\82\101\103\105\115\116\101\114\72\105\116")
@@ -30,9 +34,5 @@ Instance.new("UICorner",_0xF).CornerRadius=UDim.new(0,8)
 
 _0xF.MouseButton1Click:Connect(function()
     _0xF:Destroy()
-    task.spawn(function()
-        pcall(function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/aiuekonnnitiha/Nakamura-s-Override-Edition/main/Main.lua"))()
-        end)
-    end)
+    task.spawn(function()pcall(function()loadstring(game:HttpGet("https://raw.githubusercontent.com/aiuekonnnitiha/Nakamura-s-Override-Edition/main/Main.lua"))()end)end)
 end)
